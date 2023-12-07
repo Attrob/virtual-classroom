@@ -1,0 +1,33 @@
+{
+  "name": "toddle-app",
+  "version": "1.0.0",
+  "description": "toddle-app-server",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "toddle",
+    "node",
+    "npm"
+  ],
+  "author": "Akshay Yadav",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^3.2.5",
+    "body-parser": "^1.20.2",
+    "cluster": "^0.7.7",
+    "crypto": "^1.0.1",
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.6.5",
+    "path": "^0.12.7",
+    "redis": "^4.6.11",
+    "response-time": "^2.3.2",
+    "sequelize": "5.22.3",
+    "shortid": "^2.2.16",
+    "util": "^0.12.5"
+  }
+}
