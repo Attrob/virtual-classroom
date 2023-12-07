@@ -1,5 +1,5 @@
 {
-  "name": "toddle-app",
+  "name": "virtual-classroom",
   "version": "1.0.0",
   "description": "toddle-app-server",
   "main": "app.js",
@@ -7,7 +7,7 @@
     "start": "node app.js"
   },
   "keywords": [
-    "toddle",
+    "virtual-classroom",
     "node",
     "npm"
   ],
