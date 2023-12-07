@@ -1,0 +1,395 @@
+{
+	"info": {
+		"_postman_id": "25de9f21-8aa6-452d-8cf6-ac60f5197870",
+		"name": "toddle-server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Ping",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8087/api/ping",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"api",
+						"ping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "trace_id",
+						"value": "R6f9iG",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"kevin.m@dummy.com\",\n    \"password\": \"pass@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8087/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "role_id",
+						"value": "3",
+						"type": "text"
+					},
+					{
+						"key": "trace_id",
+						"value": "7UksgiO",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "Dummy",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_name\": \"Micheal Scott\",\n    \"email_id\": \"micheal.s@toddle.com\",\n    \"role_id\": 1,\n    \"password\": \"pass@123\",\n    \"is_active\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8087/api/user/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"api",
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "role_id",
+						"value": "3",
+						"type": "text"
+					},
+					{
+						"key": "trace_id",
+						"value": "O8p7enR",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "Dummy",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": 1,\n    \"user_name\": \"Kevin J Malone\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8087/api/user/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"api",
+						"user",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Assignment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "role_id",
+						"value": "1",
+						"type": "text"
+					},
+					{
+						"key": "user_id",
+						"value": "2",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "dummy",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"assignment_title\": \"Physics - Momentum\",\n    \"assignment_description\": \"Solve any 3 problems on momentum\",\n    \"published_at\": \"2023-12-13\",\n    \"deadline\": \"2023-12-11\",\n    \"student_list\": [1]\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8087/api/assignment/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"api",
+						"assignment",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modify Assignment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "role_id",
+						"value": "1",
+						"type": "text"
+					},
+					{
+						"key": "user_id",
+						"value": "2",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "Dummy",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"assignment_id\": 1,\n    \"assignment_description\": \"Write a detailed not on your journey in the last 2 year\",\n    \"deadline\": \"2023-12-20\",\n    \"student_list\": [1]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8087/api/assignment/modify",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"api",
+						"assignment",
+						"modify"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assignment List",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "role_id",
+						"value": "2",
+						"type": "text"
+					},
+					{
+						"key": "user_id",
+						"value": "1",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbF9pZCI6ImtldmluLm1AZHVtbXkuY29tIiwiaWF0IjoxNzAxNjExNDEwLCJleHAiOjE3MDE2NDAyMTB9.SeQXFcAzJtuYIZN4WOwiKOqe-XM_eDZ3ovxl2iK_2YU",
+						"type": "text"
+					},
+					{
+						"key": "trace_id",
+						"value": "Djd4ja7",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8087/api/assignment/list?status=SUBMITTED,PENDING",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"api",
+						"assignment",
+						"list"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "SUBMITTED,PENDING"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assignment Data",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "user_id",
+						"value": "2",
+						"type": "text"
+					},
+					{
+						"key": "role_id",
+						"value": "1",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "Dummy",
+						"type": "text"
+					},
+					{
+						"key": "trace_id",
+						"value": "UL3f1o",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8087/api/assignment/data?assignment_id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"api",
+						"assignment",
+						"data"
+					],
+					"query": [
+						{
+							"key": "assignment_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit Assignment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "role_id",
+						"value": "2",
+						"type": "text"
+					},
+					{
+						"key": "user_id",
+						"value": "1",
+						"type": "text"
+					},
+					{
+						"key": "trace_id",
+						"value": "SmDR3G",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "Dummy",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"assignment_id\": 1,\n    \"assignment_data\": \"Submitted for 'Note on self'\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8087/api/assignment/submit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"api",
+						"assignment",
+						"submit"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
